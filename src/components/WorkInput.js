@@ -4,18 +4,18 @@ export default class WorkInput extends React.Component {
     render() {
         return (
             <fieldset>
-                <legend>Work Experience:</legend>
+                <legend>Work Experience</legend>
                 <div>
                     <label htmlFor='company'>Company:</label>
                     <input type='text' id='company'></input>
                     <label htmlFor='position'>Position:</label>
                     <input type='text' id='position'></input>
-                    <label htmlFor='startDate'>Start Date:</label>
-                    <input type='datetime-local' id='startDate'></input>
-                    <label htmlFor='endDate'>End Date:</label>
-                    <input type='datetime-local' id='endDate'></input>
-                    <label htmlFor='description'>Description:</label>
-                    <textarea id='description'></textarea> 
+                    <label htmlFor='workStart'>Start Date:</label>
+                    <input type='date' id='workStart'></input>
+                    <label htmlFor='workEnd'>End Date:</label>
+                    <input type='date' id='workEnd'></input>
+                    <label htmlFor='workDescription'>Description:</label>
+                    <textarea id='workDescription'></textarea> 
                 </div>
             </fieldset>
         );

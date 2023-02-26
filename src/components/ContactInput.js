@@ -4,13 +4,13 @@ export default class ContactInput extends React.Component {
     render() {
         return (
             <fieldset>
-            <legend>Contact Information:</legend>
+            <legend>Contact Information</legend>
             <label htmlFor='firstName'>First Name:</label>
             <input type='text' id='firstName'></input>
             <label htmlFor='lastName'>Last Name:</label>
             <input type='text' id='lastName'></input>
             <fieldset>
-                <legend>Address:</legend>
+                <legend>Address</legend>
                 <label htmlFor='street'>Street Address:</label>
                 <input type='text' id='street'></input>
                 <label htmlFor='city'>City:</label>
