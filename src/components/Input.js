@@ -4,6 +4,7 @@ import SummaryInput from './SummaryInput';
 import SkillsInput from './SkillsInput';
 import WorkInput from './WorkInput';
 import EducationInput from './EducationInput';
+import MiscInput from './MiscInput';
 
 export default class Input extends React.Component {
     render() {
@@ -14,6 +15,7 @@ export default class Input extends React.Component {
                 <SkillsInput />
                 <WorkInput />
                 <EducationInput />
+                <MiscInput />
             </form>
         );
     }

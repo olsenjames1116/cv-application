@@ -8,8 +8,8 @@ export default class WorkInput extends React.Component {
                 <div>
                     <label htmlFor='company'>Company:</label>
                     <input type='text' id='company'></input>
-                    <label htmlFor='position'>Position:</label>
-                    <input type='text' id='position'></input>
+                    <label htmlFor='workPosition'>Position:</label>
+                    <input type='text' id='workPosition'></input>
                     <label htmlFor='workStart'>Start Date:</label>
                     <input type='date' id='workStart'></input>
                     <label htmlFor='workEnd'>End Date:</label>
