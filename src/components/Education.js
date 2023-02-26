@@ -1,3 +1,5 @@
-export default class Education {
+import React from 'react';
+
+export default class Education extends React.Component {
     
 }
