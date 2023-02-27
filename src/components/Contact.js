@@ -15,8 +15,8 @@ export default class Contact extends React.Component {
                 <h1>{firstName} {lastName}</h1>
                 <p>
                     <span>{street}, {city}, {state} {zip}</span>
-                    <span>Phone</span>
-                    <span>Email</span>
+                    <span>{phone}</span>
+                    <span>{email}</span>
                 </p>
             </div>
         );
