@@ -14,7 +14,7 @@ export default class Input extends React.Component {
     render() {
         return (
             <form onSubmit={this.props.onFormSubmit}>
-                <ContactInput onInputChange={this.props.onInputChange}/>
+                <ContactInput handleChange={this.props.handleChange}/>
                 <SummaryInput onInputChange={this.props.onInputChange}/>
                 <SkillsInput onInputChange={this.props.onInputChange}/>
                 <WorkInput onInputChange={this.props.onInputChange}/>

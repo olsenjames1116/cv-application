@@ -7,32 +7,42 @@ export default class App extends React.Component {
         super();
 
         this.state = {
-            firstName: '',
-            lastName: '',
-            address: {
-                street: '',
-                city: '',
-                state: '',
-                zip: 0
-            },
-            phone: 0,
-            email: ''
+            contact: {            
+                firstName: '',
+                lastName: '',
+                address: {
+                    street: '',
+                    city: '',
+                    state: '',
+                    zip: 0
+                },
+                phone: 0,
+                email: ''
+            }
         }
 
         this.handleChange = this.handleChange.bind(this);
         this.submitForm = this.submitForm.bind(this);
     }
 
+    contactChange(id, value) {
+        this.setState({contact: { ...this.state.contact, [ id ]: value }});
+    }
+
+    addressChange(id, value) {
+        this.setState({contact: {...this.state.contact, address: { ...this.state.contact.address, [ id ]: value }}});
+    }
+
     handleChange(event) {
         const {id, value} = event.target;
 
-        console.log(event.target.id);
+        if(id === 'firstName' || id === 'lastName' || id === 'phone' || id === 'email') {
+            this.contactChange(id, value);
+        }
 
-        this.setState({
-            [ id ]: value
-        })
-
-        console.log(this.state);
+        if(id === 'street' || id === 'city' || id === 'state' || id === 'zip') {
+            this.addressChange(id, value);
+        }
     }
 
     submitForm(event) {
@@ -43,7 +53,7 @@ export default class App extends React.Component {
     render() {
         return(
             <div>
-                <Input onInputChange={this.handleChange} onFormSubmit={this.submitForm}/>
+                <Input handleChange={this.handleChange} onFormSubmit={this.submitForm}/>
                 <Resume state={this.state}/>
             </div>
         );

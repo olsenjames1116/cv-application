@@ -16,7 +16,7 @@ export default class Resume extends React.Component {
         // console.log(contact);
         return (
             <div>
-                <Contact contact={this.props.state}/>
+                <Contact contact={this.props.state.contact}/>
                 <Summary />
                 <Skills />
                 <Work />
