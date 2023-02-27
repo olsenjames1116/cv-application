@@ -4,6 +4,7 @@ import Summary from './Summary';
 import Skills from './Skills';
 import Work from './Work';
 import Education from './Education';
+import Misc from './Misc';
 
 export default class Resume extends React.Component {
     render() {
@@ -14,6 +15,7 @@ export default class Resume extends React.Component {
                 <Skills />
                 <Work />
                 <Education />
+                <Misc />
             </div>
         );
     }
