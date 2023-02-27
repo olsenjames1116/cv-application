@@ -7,15 +7,20 @@ import EducationInput from './EducationInput';
 import MiscInput from './MiscInput';
 
 export default class Input extends React.Component {
+    submitForm(event) {
+        event.preventDefault();
+    }
+
     render() {
         return (
-            <form>
+            <form onSubmit={this.submitForm}>
                 <ContactInput />
                 <SummaryInput />
                 <SkillsInput />
                 <WorkInput />
                 <EducationInput />
                 <MiscInput />
+                <button type='submit'>Submit</button>
             </form>
         );
     }

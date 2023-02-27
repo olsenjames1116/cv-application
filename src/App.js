@@ -1,5 +1,6 @@
 import React from 'react';
 import Input from './components/Input.js';
+import Resume from './components/Resume.js';
 
 export default class App extends React.Component {
     constructor() {
@@ -8,7 +9,10 @@ export default class App extends React.Component {
     
     render() {
         return(
-            <Input />
+            <div>
+                <Input />
+                <Resume />
+            </div>
         );
     }
 }
