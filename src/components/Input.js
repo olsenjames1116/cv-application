@@ -7,6 +7,10 @@ import EducationInput from './EducationInput';
 import MiscInput from './MiscInput';
 
 export default class Input extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
     submitForm(event) {
         event.preventDefault();
     }
@@ -14,7 +18,7 @@ export default class Input extends React.Component {
     render() {
         return (
             <form onSubmit={this.submitForm}>
-                <ContactInput />
+                <ContactInput onInputChange={this.props.onInputChange}/>
                 <SummaryInput />
                 <SkillsInput />
                 <WorkInput />
