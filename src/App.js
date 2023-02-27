@@ -7,46 +7,44 @@ export default class App extends React.Component {
         super();
 
         this.state = {
-            contact: {
-                firstName: '',
-                lastName: '',
-                address: {
-                    street: '',
-                    city: '',
-                    state: '',
-                    zip: 0
-                },
-                phone: 0,
-                email: ''
-            }
+            firstName: '',
+            lastName: '',
+            address: {
+                street: '',
+                city: '',
+                state: '',
+                zip: 0
+            },
+            phone: 0,
+            email: ''
         }
 
         this.handleChange = this.handleChange.bind(this);
+        this.submitForm = this.submitForm.bind(this);
     }
 
     handleChange(event) {
-        const {name, value} = event.target;
+        const {id, value} = event.target;
+
+        console.log(event.target.id);
 
         this.setState({
-            ...this.state,
-            [ name ]: value
+            [ id ]: value
         })
 
         console.log(this.state);
     }
 
-    // onSubmitForm(event) {
-    //     event.preventDefault();
-    //     this.setState({
-
-    //     })
-    // }
+    submitForm(event) {
+        event.preventDefault();
+        console.log(this.state);
+    }
 
     render() {
         return(
             <div>
-                <Input onInputChange={this.handleChange}/>
-                <Resume />
+                <Input onInputChange={this.handleChange} onFormSubmit={this.submitForm}/>
+                <Resume state={this.state}/>
             </div>
         );
     }

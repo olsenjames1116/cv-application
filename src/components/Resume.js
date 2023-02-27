@@ -7,10 +7,16 @@ import Education from './Education';
 import Misc from './Misc';
 
 export default class Resume extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
     render() {
+        // const { contact } = this.props.state;
+        // console.log(contact);
         return (
             <div>
-                <Contact />
+                <Contact contact={this.props.state}/>
                 <Summary />
                 <Skills />
                 <Work />

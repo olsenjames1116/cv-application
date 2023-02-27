@@ -11,13 +11,9 @@ export default class Input extends React.Component {
         super(props);
     }
 
-    submitForm(event) {
-        event.preventDefault();
-    }
-
     render() {
         return (
-            <form onSubmit={this.submitForm}>
+            <form onSubmit={this.props.onFormSubmit}>
                 <ContactInput onInputChange={this.props.onInputChange}/>
                 <SummaryInput onInputChange={this.props.onInputChange}/>
                 <SkillsInput onInputChange={this.props.onInputChange}/>
