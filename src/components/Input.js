@@ -19,11 +19,11 @@ export default class Input extends React.Component {
         return (
             <form onSubmit={this.submitForm}>
                 <ContactInput onInputChange={this.props.onInputChange}/>
-                <SummaryInput />
-                <SkillsInput />
-                <WorkInput />
-                <EducationInput />
-                <MiscInput />
+                <SummaryInput onInputChange={this.props.onInputChange}/>
+                <SkillsInput onInputChange={this.props.onInputChange}/>
+                <WorkInput onInputChange={this.props.onInputChange}/>
+                <EducationInput onInputChange={this.props.onInputChange}/>
+                <MiscInput onInputChange={this.props.onInputChange}/>
                 <button type='submit'>Submit</button>
             </form>
         );
