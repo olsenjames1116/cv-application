@@ -6,21 +6,31 @@ export default class MiscInput extends React.Component {
     }
 
     render() {
+        const { misc, handleChange } = this.props;
+
         return (
             <fieldset>
                 <legend>Misc Experience</legend>
-                <div>
-                    <label htmlFor='organization'>Organization:</label>
-                    <input type='text' id='organization' onChange={this.props.onInputChange}></input>
-                    <label htmlFor='miscPosition'>Position:</label>
-                    <input type='text' id='miscPosition' onChange={this.props.onInputChange}></input>
-                    <label htmlFor='miscStart'>Start Date:</label>
-                    <input type='date' id='miscStart' onChange={this.props.onInputChange}></input>
-                    <label htmlFor='miscEnd'>End Date:</label>
-                    <input type='date' id='miscEnd' onChange={this.props.onInputChange}></input>
-                    <label htmlFor='miscDescription'>Description:</label>
-                    <textarea id='miscDescription' onChange={this.props.onInputChange}></textarea> 
-                </div>
+                <ul>
+                    {
+                        misc.map((experience) => {
+                            return (
+                                <li key={experience.id}>
+                                    <label htmlFor={`organization_${experience.id}`}>Organization:</label>
+                                    <input type='text' id={`organization_${experience.id}`} className='misc' onChange={handleChange}></input>
+                                    <label htmlFor={`position_${experience.id}`}>Position:</label>
+                                    <input type='text' id={`position_${experience.id}`} className='misc' onChange={handleChange}></input>
+                                    <label htmlFor={`start_${experience.id}`}>Start Date:</label>
+                                    <input type='date' id={`start_${experience.id}`} className='misc' onChange={handleChange}></input>
+                                    <label htmlFor={`end_${experience.id}`}>End Date:</label>
+                                    <input type='date' id={`end_${experience.id}`} className='misc' onChange={handleChange}></input>
+                                    <label htmlFor={`description_${experience.id}`}>Description:</label>
+                                    <textarea id={`description_${experience.id}`} className='misc' onChange={handleChange}></textarea>
+                                </li>
+                            );
+                        })
+                    }
+                </ul>
             </fieldset>
         );
     }

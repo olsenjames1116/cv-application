@@ -10,7 +10,7 @@ export default class EducationInput extends React.Component {
 
         return (
             <fieldset>
-                <legend>Education:</legend>
+                <legend>Education</legend>
                 <ul>
                     {
                         education.map((program) => {
