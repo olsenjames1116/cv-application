@@ -9,46 +9,46 @@ export default class App extends React.Component {
 
         this.state = {
             contact: {            
-                firstName: '',
-                lastName: '',
+                firstName: 'Peter',
+                lastName: 'Parker',
                 address: {
-                    street: '',
-                    city: '',
-                    state: '',
-                    zip: 0
+                    street: '1234 Web Blvd',
+                    city: 'Queens',
+                    state: 'NY',
+                    zip: 11366
                 },
-                phone: 0,
-                email: ''
+                phone: 123456789,
+                email: 'spidey@avengers.com'
             },
-            summary: '',
-            skills: '',
+            summary: 'Your friendly neighborhood spider! I am a master at stopping crime, research & development, comedic timing and web development.',
+            skills: 'Engineering - Wall-Climbing - Superhuman Strength - Enhanced Senses',
             work: [
                 {
                     id: uniqid(), 
-                    company: '',
-                    position: '',
-                    start: '',
-                    end: '',
-                    description: '' 
+                    company: 'Avengers',
+                    position: 'Hero',
+                    start: '2018-06-01',
+                    end: '2023-02-28',
+                    description: 'A member of earth\'s mightiest heros!' 
                 }
             ],
             education: [
                 {
                     id: uniqid(),
-                    school: '',
-                    curriculum: '',
-                    start: '',
-                    end: '',
+                    school: 'Empire State University',
+                    curriculum: 'Biochemistry',
+                    start: '2014-01-01',
+                    end: '2018-05-31',
                     description: ''
                 }
             ],
             misc: [
                 {
                     id: uniqid(),
-                    organization: '',
-                    position: '',
-                    start: '',
-                    end: '',
+                    organization: 'Empire State University Labs',
+                    position: 'Researcher',
+                    start: '2016-01-01',
+                    end: '2018-05-31',
                     description: ''
                 }
             ]

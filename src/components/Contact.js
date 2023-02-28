@@ -8,15 +8,14 @@ export default class Contact extends React.Component {
     render() {
         const { firstName, lastName, phone, email } = this.props.contact;
         const { street, city, state, zip } = this.props.contact.address;
-        // console.log(this.props);
 
         return (
             <div>
                 <h1>{firstName} {lastName}</h1>
                 <p>
                     <span>{street}, {city}, {state} {zip}</span>
-                    <span>{phone}</span>
-                    <span>{email}</span>
+                    <span> - {phone}</span>
+                    <span> - {email}</span>
                 </p>
             </div>
         );
