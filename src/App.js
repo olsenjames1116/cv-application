@@ -31,6 +31,12 @@ export default class App extends React.Component {
                     end: '',
                     description: '' 
                 }
+            ],
+            education: [
+                {
+                    id: uniqid()
+
+                }
             ]
         }
 
@@ -55,9 +61,20 @@ export default class App extends React.Component {
     }
 
     workChange(key, id, value) {
-        const index = this.state.work.findIndex((job) => job.id === id);
+        const { work } = this.state;
+        const index = work.findIndex((job) => job.id === id);
 
-        this.setState({...this.state, work: [...this.state.work.splice(0, index), {...this.state.work[index], [ key ]: value}, this.state.work.splice(index + 1)]});
+        if(work.length === 1) {
+            this.setState({...this.state, work: [Object.assign({...this.state.work[index], [ key ]: value})]});
+        }
+
+        if(work.length > 1) {        
+            this.setState({...this.state, work: [...this.state.work.slice(0, index), Object.assign({...this.state.work[index], [ key ]: value}), this.state.work.slice(index + 1)]});
+        }        
+    }
+
+    educationChange() {
+
     }
 
     handleChange(event) {
@@ -82,6 +99,10 @@ export default class App extends React.Component {
         if(className === 'work') {
             const workId = id.split('_');
             this.workChange(workId[0], workId[1], value);
+        }
+
+        if(className === 'education') {
+
         }
     }
 

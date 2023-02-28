@@ -15,7 +15,7 @@ export default class Work extends React.Component {
                     {
                         work.map((job) => {
                             return (
-                                <li>
+                                <li key={job.id}>
                                     <h3>{job.company}</h3>
                                     <span> - {job.position}<br /></span>
                                     <span>{job.start} - {job.end}</span>

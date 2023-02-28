@@ -15,7 +15,7 @@ export default class WorkInput extends React.Component {
                     {
                         work.map((job) => {
                             return (                        
-                                <li>
+                                <li key={job.id}>
                                     <label htmlFor={`company_${job.id}`}>Company:</label>
                                     <input type='text' id={`company_${job.id}`} className='work' onChange={handleChange}></input>
                                     <label htmlFor={`position_${job.id}`}>Position:</label>
