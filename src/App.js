@@ -54,13 +54,16 @@ export default class App extends React.Component {
         this.setState({...this.state, skills: value});
     }
 
-    workChange(id, key, value) {
-        console.log(`workChange: ${key}`);
-        this.setState({...this.state});
+    workChange(key, id, value) {
+        const index = this.state.work.findIndex((job) => job.id === id);
+        console.log(key);
+
+        this.setState({...this.state, work: [...this.state.work.splice(0, index), {...this.state.work[index], [ key ]: value}, this.state.work.splice(index + 1)]});
+        console.log(this.state);
     }
 
     handleChange(event) {
-        const { classList, id, value } = event.target;
+        const { className, id, value } = event.target;
 
         if(id === 'firstName' || id === 'lastName' || id === 'phone' || id === 'email') {
             this.contactChange(id, value);
@@ -78,8 +81,9 @@ export default class App extends React.Component {
             this.skillsChange(value);
         }
 
-        if([...classList].includes('work')) {
-            this.workChange(id, classList[1], value);
+        if(className === 'work') {
+            const workId = id.split('_');
+            this.workChange(workId[0], workId[1], value);
         }
     }
 

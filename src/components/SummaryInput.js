@@ -6,10 +6,12 @@ export default class SummaryInput extends React.Component {
     }
 
     render() {
+        const { handleChange } = this.props;
+
         return (
             <div>
                 <label htmlFor='summary'>Summary:</label>
-                <textarea id='summary' onChange={this.props.handleChange}></textarea>
+                <textarea id='summary' onChange={handleChange}></textarea>
             </div>
         );
     }
