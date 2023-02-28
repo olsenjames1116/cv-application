@@ -56,10 +56,8 @@ export default class App extends React.Component {
 
     workChange(key, id, value) {
         const index = this.state.work.findIndex((job) => job.id === id);
-        console.log(key);
 
         this.setState({...this.state, work: [...this.state.work.splice(0, index), {...this.state.work[index], [ key ]: value}, this.state.work.splice(index + 1)]});
-        console.log(this.state);
     }
 
     handleChange(event) {

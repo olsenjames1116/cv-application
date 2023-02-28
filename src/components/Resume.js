@@ -13,7 +13,6 @@ export default class Resume extends React.Component {
 
     render() {
         const { contact, summary, skills, work } = this.props.state;
-        console.log(contact)
 
         return (
             <div>
