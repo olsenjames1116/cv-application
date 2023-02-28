@@ -18,7 +18,8 @@ export default class App extends React.Component {
                 },
                 phone: 0,
                 email: ''
-            }
+            },
+            summary: ''
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -26,11 +27,15 @@ export default class App extends React.Component {
     }
 
     contactChange(id, value) {
-        this.setState({contact: { ...this.state.contact, [ id ]: value }});
+        this.setState({...this.state, contact: { ...this.state.contact, [ id ]: value }});
     }
 
     addressChange(id, value) {
-        this.setState({contact: {...this.state.contact, address: { ...this.state.contact.address, [ id ]: value }}});
+        this.setState({...this.state, contact: {...this.state.contact, address: { ...this.state.contact.address, [ id ]: value }}});
+    }
+
+    summaryChange(value) {
+        this.setState({...this.state, summary: value})
     }
 
     handleChange(event) {
@@ -42,6 +47,10 @@ export default class App extends React.Component {
 
         if(id === 'street' || id === 'city' || id === 'state' || id === 'zip') {
             this.addressChange(id, value);
+        }
+
+        if(id === 'summary') {
+            this.summaryChange(value);
         }
     }
 
