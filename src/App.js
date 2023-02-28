@@ -19,7 +19,8 @@ export default class App extends React.Component {
                 phone: 0,
                 email: ''
             },
-            summary: ''
+            summary: '',
+            skills: ''
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -35,7 +36,11 @@ export default class App extends React.Component {
     }
 
     summaryChange(value) {
-        this.setState({...this.state, summary: value})
+        this.setState({...this.state, summary: value});
+    }
+
+    skillsChange(value) {
+        this.setState({...this.state, skills: value});
     }
 
     handleChange(event) {
@@ -51,6 +56,10 @@ export default class App extends React.Component {
 
         if(id === 'summary') {
             this.summaryChange(value);
+        }
+
+        if(id === 'skills') {
+            this.skillsChange(value);
         }
     }
 

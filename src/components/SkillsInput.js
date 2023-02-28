@@ -9,7 +9,7 @@ export default class SkillsInput extends React.Component {
         return (
             <div>
                 <label htmlFor='skills'>Skills:</label>
-                <textarea id='skills' onChange={this.props.onInputChange}></textarea>
+                <textarea id='skills' onChange={this.props.handleChange}></textarea>
             </div>
         );
     }
