@@ -6,21 +6,31 @@ export default class EducationInput extends React.Component {
     }
 
     render() {
+        const { education, handleChange } = this.props;
+
         return (
             <fieldset>
-                <legend>Education</legend>
-                <div>
-                    <label htmlFor='curriculum'>Curriculum:</label>
-                    <input type='text' id='curriculum' onChange={this.props.onInputChange}></input>
-                    <label htmlFor='school'>School:</label>
-                    <input type='text' id='school' onChange={this.props.onInputChange}></input>
-                    <label htmlFor='schoolStart'>Start Date:</label>
-                    <input type='date' id='schoolStart' onChange={this.props.onInputChange}></input>
-                    <label htmlFor='schoolEnd'>End Date:</label>
-                    <input type='date' id='schoolEnd' onChange={this.props.onInputChange}></input>
-                    <label htmlFor='schoolDescription'>Description:</label>
-                    <textarea id='schoolDescription' onChange={this.props.onInputChange}></textarea>
-                </div>
+                <legend>Education:</legend>
+                <ul>
+                    {
+                        education.map((program) => {
+                            return (
+                                <li key={program.id}>
+                                    <label htmlFor={`school_${program.id}`}>School:</label>
+                                    <input type='text' id={`school_${program.id}`} className='education' onChange={handleChange}></input>
+                                    <label htmlFor={`curriculum_${program.id}`}>Curriculum:</label>
+                                    <input type='text' id={`curriculum_${program.id}`} className='education' onChange={handleChange}></input>
+                                    <label htmlFor={`start_${program.id}`}>Start Date:</label>
+                                    <input type='date' id={`start_${program.id}`} className='education' onChange={handleChange}></input>
+                                    <label htmlFor={`end_${program.id}`}>End Date:</label>
+                                    <input type='date' id={`end_${program.id}`} className='education' onChange={handleChange}></input>
+                                    <label htmlFor={`description_${program.id}`}>Description:</label>
+                                    <textarea id={`description_${program.id}`} className='education' onChange={handleChange}></textarea>
+                                </li>
+                            );
+                        })
+                    }
+                </ul>
             </fieldset>
         );
     }

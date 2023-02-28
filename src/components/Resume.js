@@ -12,7 +12,7 @@ export default class Resume extends React.Component {
     }
 
     render() {
-        const { contact, summary, skills, work } = this.props.state;
+        const { contact, summary, skills, work, education } = this.props.state;
 
         return (
             <div>
@@ -20,7 +20,7 @@ export default class Resume extends React.Component {
                 <Summary summary={summary}/>
                 <Skills skills={skills}/>
                 <Work work={work}/>
-                <Education />
+                <Education education={education}/>
                 <Misc />
             </div>
         );

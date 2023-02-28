@@ -34,8 +34,12 @@ export default class App extends React.Component {
             ],
             education: [
                 {
-                    id: uniqid()
-
+                    id: uniqid(),
+                    school: '',
+                    curriculum: '',
+                    start: '',
+                    end: '',
+                    description: ''
                 }
             ]
         }
@@ -69,12 +73,21 @@ export default class App extends React.Component {
         }
 
         if(work.length > 1) {        
-            this.setState({...this.state, work: [...this.state.work.slice(0, index), Object.assign({...this.state.work[index], [ key ]: value}), this.state.work.slice(index + 1)]});
+            this.setState({...this.state, work: [...this.state.work.slice(0, index), Object.assign({...this.state.work[index], [ key ]: value}), ...this.state.work.slice(index + 1)]});
         }        
     }
 
-    educationChange() {
+    educationChange(key, id, value) {
+        const { education } = this.state;
+        const index = education.findIndex((program) => program.id === id);
 
+        if(education.length === 1) {
+            this.setState({...this.state, education: [Object.assign({...this.state.education[index], [ key ]: value})]});
+        }
+
+        if(education.length > 1) {
+            this.setState({...this.state, education: [...this.state.education.slice(0, index), Object.assign({...this.state.education[index], [ key ]: value}), ...this.state.work.slice(index + 1)]});
+        }
     }
 
     handleChange(event) {
@@ -102,7 +115,8 @@ export default class App extends React.Component {
         }
 
         if(className === 'education') {
-
+            const educationId = id.split('_');
+            this.educationChange(educationId[0], educationId[1], value);
         }
     }
 
@@ -112,11 +126,11 @@ export default class App extends React.Component {
     }
 
     render() {
-        const { work } = this.state;
+        const { work, education } = this.state;
 
         return(
             <div>
-                <Input work={work} handleChange={this.handleChange} onFormSubmit={this.submitForm}/>
+                <Input work={work} education={education} handleChange={this.handleChange} onFormSubmit={this.submitForm}/>
                 <Resume state={this.state}/>
             </div>
         );

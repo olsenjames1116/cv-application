@@ -12,7 +12,7 @@ export default class Input extends React.Component {
     }
 
     render() {
-        const { work, onFormSubmit, handleChange } = this.props;
+        const { work, education, onFormSubmit, handleChange } = this.props;
 
         return (
             <form onSubmit={onFormSubmit}>
@@ -20,7 +20,7 @@ export default class Input extends React.Component {
                 <SummaryInput handleChange={handleChange}/>
                 <SkillsInput handleChange={handleChange}/>
                 <WorkInput work={work} handleChange={handleChange}/>
-                <EducationInput onInputChange={this.props.onInputChange}/>
+                <EducationInput education={education} handleChange={handleChange}/>
                 <MiscInput onInputChange={this.props.onInputChange}/>
                 <button type='submit'>Submit</button>
             </form>
