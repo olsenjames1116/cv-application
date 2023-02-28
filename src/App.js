@@ -1,6 +1,7 @@
 import React from 'react';
 import Input from './components/Input.js';
 import Resume from './components/Resume.js';
+import uniqid from 'uniqid';
 
 export default class App extends React.Component {
     constructor() {
@@ -20,7 +21,17 @@ export default class App extends React.Component {
                 email: ''
             },
             summary: '',
-            skills: ''
+            skills: '',
+            work: [
+                {
+                    id: uniqid(), 
+                    company: '',
+                    position: '',
+                    start: '',
+                    end: '',
+                    description: '' 
+                }
+            ]
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -43,8 +54,13 @@ export default class App extends React.Component {
         this.setState({...this.state, skills: value});
     }
 
+    workChange(id, key, value) {
+        console.log(`workChange: ${key}`);
+        this.setState({...this.state});
+    }
+
     handleChange(event) {
-        const {id, value} = event.target;
+        const { classList, id, value } = event.target;
 
         if(id === 'firstName' || id === 'lastName' || id === 'phone' || id === 'email') {
             this.contactChange(id, value);
@@ -61,6 +77,10 @@ export default class App extends React.Component {
         if(id === 'skills') {
             this.skillsChange(value);
         }
+
+        if([...classList].includes('work')) {
+            this.workChange(id, classList[1], value);
+        }
     }
 
     submitForm(event) {
@@ -69,9 +89,11 @@ export default class App extends React.Component {
     }
 
     render() {
+        const { work } = this.state;
+
         return(
             <div>
-                <Input handleChange={this.handleChange} onFormSubmit={this.submitForm}/>
+                <Input work={work} handleChange={this.handleChange} onFormSubmit={this.submitForm}/>
                 <Resume state={this.state}/>
             </div>
         );

@@ -6,21 +6,29 @@ export default class WorkInput extends React.Component {
     }
 
     render() {
+        const { work, handleChange } = this.props;
+
         return (
             <fieldset>
                 <legend>Work Experience</legend>
-                <div>
-                    <label htmlFor='company'>Company:</label>
-                    <input type='text' id='company' onChange={this.props.onInputChange}></input>
-                    <label htmlFor='workPosition'>Position:</label>
-                    <input type='text' id='workPosition' onChange={this.props.onInputChange}></input>
-                    <label htmlFor='workStart'>Start Date:</label>
-                    <input type='date' id='workStart' onChange={this.props.onInputChange}></input>
-                    <label htmlFor='workEnd'>End Date:</label>
-                    <input type='date' id='workEnd' onChange={this.props.onInputChange}></input>
-                    <label htmlFor='workDescription'>Description:</label>
-                    <textarea id='workDescription' onChange={this.props.onInputChange}></textarea> 
-                </div>
+                <ul>
+                    {work.map((job) => {
+                        return (                        
+                            <li>
+                                <label htmlFor={`company${job.id}`}>Company:</label>
+                                <input type='text' id={`company${job.id}`} className='work company' onChange={handleChange}></input>
+                                <label htmlFor={`position${job.id}`}>Position:</label>
+                                <input type='text' id={`position${job.id}`} className='work position' onChange={handleChange}></input>
+                                <label htmlFor={`start${job.id}`}>Start Date:</label>
+                                <input type='date' id={`start${job.id}`} className='work start' onChange={handleChange}></input>
+                                <label htmlFor={`end${job.id}`}>End Date:</label>
+                                <input type='date' id={`end${job.id}`} className='work end' onChange={handleChange}></input>
+                                <label htmlFor={`description${job.id}`}>Description:</label>
+                                <textarea id={`description${job.id}`} className='work description' onChange={handleChange}></textarea>
+                            </li>
+                        );
+                    })}
+                </ul>
             </fieldset>
         );
     }
