@@ -1,4 +1,5 @@
 import React from "react";
+import '../styles/SummaryInput.css';
 
 export default class SummaryInput extends React.Component {
     constructor(props) {
@@ -9,7 +10,7 @@ export default class SummaryInput extends React.Component {
         const { summary, handleChange } = this.props;
 
         return (
-            <div>
+            <div className='summary'>
                 <label htmlFor='summary'>Summary:</label>
                 <textarea id='summary' placeholder={summary} onChange={handleChange}></textarea>
             </div>

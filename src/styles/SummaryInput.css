@@ -1,0 +1,12 @@
+div.summary {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+textarea#summary {
+  resize: none;
+  height: 100px;
+  overflow: scroll;
+}
