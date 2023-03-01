@@ -6,12 +6,12 @@ export default class SkillsInput extends React.Component {
     }
 
     render() {
-        const { handleChange } = this.props;
+        const { skills, handleChange } = this.props;
 
         return (
             <div>
                 <label htmlFor='skills'>Skills:</label>
-                <textarea id='skills' onChange={handleChange}></textarea>
+                <textarea id='skills' placeholder={skills} onChange={handleChange}></textarea>
             </div>
         );
     }

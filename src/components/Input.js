@@ -12,13 +12,14 @@ export default class Input extends React.Component {
     }
 
     render() {
-        const { contact, work, education, misc, onFormSubmit, handleChange } = this.props;
+        const { contact, summary, skills, work, education, misc } = this.props.state;
+        const { onFormSubmit, handleChange } = this.props;
 
         return (
             <form onSubmit={onFormSubmit}>
                 <ContactInput contact={contact} handleChange={handleChange}/>
-                <SummaryInput handleChange={handleChange}/>
-                <SkillsInput handleChange={handleChange}/>
+                <SummaryInput summary={summary} handleChange={handleChange}/>
+                <SkillsInput skills={skills} handleChange={handleChange}/>
                 <WorkInput work={work} handleChange={handleChange}/>
                 <EducationInput education={education} handleChange={handleChange}/>
                 <MiscInput misc={misc} handleChange={handleChange}/>
