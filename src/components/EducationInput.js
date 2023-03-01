@@ -6,7 +6,7 @@ export default class EducationInput extends React.Component {
     }
 
     render() {
-        const { education, handleChange } = this.props;
+        const { addExperience, education, handleChange } = this.props;
 
         return (
             <fieldset>
@@ -31,6 +31,7 @@ export default class EducationInput extends React.Component {
                         })
                     }
                 </ul>
+                <button type='button' className='education' onClick={addExperience}>Add</button>
             </fieldset>
         );
     }

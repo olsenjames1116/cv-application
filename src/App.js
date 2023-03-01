@@ -54,7 +54,7 @@ export default class App extends React.Component {
             ]
         }
 
-        this.addWork = this.addWork.bind(this);
+        this.addExperience = this.addExperience.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.submitForm = this.submitForm.bind(this);
     }
@@ -119,6 +119,31 @@ export default class App extends React.Component {
         console.log(this.state)
     }
 
+    addEducation() {
+        this.setState({...this.state, education: this.state.education.concat({ id: uniqid(), school: 'Empire State University', curriculum: 'Biochemistry', start: '2014-01-01', end: '2018-05-31', description: '' })})
+        console.log(this.state)
+    }
+
+    addExperience(event) {
+        const { className } = event.target;
+
+        if(className === 'work') {
+            this.addWork();
+        }
+
+        if(className === 'education') {
+            this.addEducation();
+        }
+
+        // switch(className) {
+        //     case 'work':
+        //         this.addWork();
+        //     case: 'education':
+        //         this.addEducation();
+        //     default :
+        // }
+    }
+
     handleChange(event) {
         const { className, id, value } = event.target;
 
@@ -162,7 +187,7 @@ export default class App extends React.Component {
     render() {
         return(
             <div>
-                <Input state={this.state} addWork={this.addWork} handleChange={this.handleChange} submitForm={this.submitForm}/>
+                <Input state={this.state} addExperience={this.addExperience} handleChange={this.handleChange} submitForm={this.submitForm}/>
                 <Resume state={this.state}/>
             </div>
         );
