@@ -54,6 +54,7 @@ export default class App extends React.Component {
             ]
         }
 
+        this.addWork = this.addWork.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.submitForm = this.submitForm.bind(this);
     }
@@ -113,6 +114,11 @@ export default class App extends React.Component {
         }
     }
 
+    addWork() {
+        this.setState({...this.state, work: this.state.work.concat({ id: uniqid(), company: 'Avengers', position: 'Hero', start: '2018-06-01', end: '2023-02-28', description: 'A member of earth\'s mightiest heros!' })})
+        console.log(this.state)
+    }
+
     handleChange(event) {
         const { className, id, value } = event.target;
 
@@ -156,7 +162,7 @@ export default class App extends React.Component {
     render() {
         return(
             <div>
-                <Input state={this.state} handleChange={this.handleChange} submitForm={this.submitForm}/>
+                <Input state={this.state} addWork={this.addWork} handleChange={this.handleChange} submitForm={this.submitForm}/>
                 <Resume state={this.state}/>
             </div>
         );

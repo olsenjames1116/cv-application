@@ -6,7 +6,7 @@ export default class WorkInput extends React.Component {
     }
 
     render() {
-        const { work, handleChange } = this.props;
+        const { addWork, work, handleChange } = this.props;
 
         return (
             <fieldset>
@@ -30,6 +30,7 @@ export default class WorkInput extends React.Component {
                             );
                     })}
                 </ul>
+                <button type='button' onClick={addWork}>Add</button>
             </fieldset>
         );
     }
