@@ -40,7 +40,7 @@ export default class App extends React.Component {
                     curriculum: 'Biochemistry',
                     start: '2014-01-01',
                     end: '2018-05-31',
-                    description: ''
+                    description: 'Graduated with honors'
                 }
             ],
             misc: [
@@ -50,7 +50,7 @@ export default class App extends React.Component {
                     position: 'Researcher',
                     start: '2016-01-01',
                     end: '2018-05-31',
-                    description: ''
+                    description: 'Worked under the great Dr. Octavius'
                 }
             ]
         }

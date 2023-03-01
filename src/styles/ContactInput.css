@@ -1,0 +1,68 @@
+div.name {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+div.name label {
+  display: block;
+}
+
+fieldset.address {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+div.street > label,
+div.city > label,
+div.state > label,
+div.zip > label {
+  display: block;
+}
+
+div.street {
+  display: flex;
+  flex-direction: column;
+}
+
+fieldset.address > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+input#city {
+  width: 15rem;
+}
+
+input#state {
+  width: 1.5rem;
+}
+
+input#zip {
+  width: 2.5rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+fieldset.contact > div:last-child {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+fieldset.contact > div:last-child label {
+  display: block;
+}
+
+input#phone {
+  width: 4.5rem;
+}
+
+input#email {
+  width: 20rem;
+}
