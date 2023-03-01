@@ -154,11 +154,11 @@ export default class App extends React.Component {
     }
 
     render() {
-        const { work, education, misc } = this.state;
+        const { contact, work, education, misc } = this.state;
 
         return(
             <div>
-                <Input work={work} education={education} misc={misc} handleChange={this.handleChange} onFormSubmit={this.submitForm}/>
+                <Input contact={contact} work={work} education={education} misc={misc} handleChange={this.handleChange} onFormSubmit={this.submitForm}/>
                 <Resume state={this.state}/>
             </div>
         );
