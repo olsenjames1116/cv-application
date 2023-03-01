@@ -17,15 +17,15 @@ export default class EducationInput extends React.Component {
                             return (
                                 <li key={program.id}>
                                     <label htmlFor={`school_${program.id}`}>School:</label>
-                                    <input type='text' id={`school_${program.id}`} className='education' onChange={handleChange}></input>
+                                    <input type='text' id={`school_${program.id}`} className='education' placeholder={program.school} onChange={handleChange}></input>
                                     <label htmlFor={`curriculum_${program.id}`}>Curriculum:</label>
-                                    <input type='text' id={`curriculum_${program.id}`} className='education' onChange={handleChange}></input>
+                                    <input type='text' id={`curriculum_${program.id}`} className='education' placeholder={program.curriculum} onChange={handleChange}></input>
                                     <label htmlFor={`start_${program.id}`}>Start Date:</label>
-                                    <input type='date' id={`start_${program.id}`} className='education' onChange={handleChange}></input>
+                                    <input type='date' id={`start_${program.id}`} className='education' placeholder={program.start} onChange={handleChange}></input>
                                     <label htmlFor={`end_${program.id}`}>End Date:</label>
-                                    <input type='date' id={`end_${program.id}`} className='education' onChange={handleChange}></input>
+                                    <input type='date' id={`end_${program.id}`} className='education' placeholder={program.end} onChange={handleChange}></input>
                                     <label htmlFor={`description_${program.id}`}>Description:</label>
-                                    <textarea id={`description_${program.id}`} className='education' onChange={handleChange}></textarea>
+                                    <textarea id={`description_${program.id}`} className='education' placeholder={program.description} onChange={handleChange}></textarea>
                                 </li>
                             );
                         })
