@@ -1,0 +1,11 @@
+div.container {
+  display: flex;
+}
+
+form {
+  flex: 1;
+}
+
+div.resume {
+  flex: 1;
+}

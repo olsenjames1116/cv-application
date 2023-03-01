@@ -2,6 +2,7 @@ import React from 'react';
 import Input from './components/Input.js';
 import Resume from './components/Resume.js';
 import uniqid from 'uniqid';
+import "./styles/App.css";
 
 export default class App extends React.Component {
     constructor() {
@@ -215,7 +216,7 @@ export default class App extends React.Component {
 
     render() {
         return(
-            <div>
+            <div className='container'>
                 <Input state={this.state} addExperience={this.addExperience} removeExperience={this.removeExperience} handleChange={this.handleChange} />
                 <Resume state={this.state}/>
             </div>
