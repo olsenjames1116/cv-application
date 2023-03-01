@@ -6,7 +6,7 @@ export default class MiscInput extends React.Component {
     }
 
     render() {
-        const { misc, handleChange } = this.props;
+        const { addExperience, misc, handleChange } = this.props;
 
         return (
             <fieldset>
@@ -31,6 +31,7 @@ export default class MiscInput extends React.Component {
                         })
                     }
                 </ul>
+                <button type='button' onClick={addExperience}>Add</button>
             </fieldset>
         );
     }

@@ -124,24 +124,24 @@ export default class App extends React.Component {
         console.log(this.state)
     }
 
+    addMisc() {
+        this.setState({...this.state, misc: this.state.misc.concat({ id: uniqid(), organization: 'Empire State University Labs', position: 'Researcher', start: '2016-01-01', end: '2018-05-31', description: '' })})
+        console.log(this.state)
+    }
+
     addExperience(event) {
         const { className } = event.target;
 
-        if(className === 'work') {
-            this.addWork();
+        switch(className) {
+            case 'work':
+                this.addWork();
+                break;
+            case 'education':
+                this.addEducation();
+                break;
+            default :
+                this.addMisc();
         }
-
-        if(className === 'education') {
-            this.addEducation();
-        }
-
-        // switch(className) {
-        //     case 'work':
-        //         this.addWork();
-        //     case: 'education':
-        //         this.addEducation();
-        //     default :
-        // }
     }
 
     handleChange(event) {

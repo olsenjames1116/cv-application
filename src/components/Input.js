@@ -22,7 +22,7 @@ export default class Input extends React.Component {
                 <SkillsInput skills={skills} handleChange={handleChange}/>
                 <WorkInput addExperience={addExperience} work={work} handleChange={handleChange}/>
                 <EducationInput addExperience={addExperience} education={education} handleChange={handleChange}/>
-                <MiscInput misc={misc} handleChange={handleChange}/>
+                <MiscInput addExperience={addExperience} misc={misc} handleChange={handleChange}/>
                 <button type='submit'>Submit</button>
             </form>
         );
