@@ -57,7 +57,6 @@ export default class App extends React.Component {
         this.addExperience = this.addExperience.bind(this);
         this.removeExperience = this.removeExperience.bind(this);
         this.handleChange = this.handleChange.bind(this);
-        this.submitForm = this.submitForm.bind(this);
     }
 
     contactChange(id, value) {
@@ -117,17 +116,14 @@ export default class App extends React.Component {
 
     addWork() {
         this.setState({...this.state, work: this.state.work.concat({ id: uniqid(), company: 'Avengers', position: 'Hero', start: '2018-06-01', end: '2023-02-28', description: 'A member of earth\'s mightiest heros!' })})
-        console.log(this.state)
     }
 
     addEducation() {
         this.setState({...this.state, education: this.state.education.concat({ id: uniqid(), school: 'Empire State University', curriculum: 'Biochemistry', start: '2014-01-01', end: '2018-05-31', description: '' })})
-        console.log(this.state)
     }
 
     addMisc() {
         this.setState({...this.state, misc: this.state.misc.concat({ id: uniqid(), organization: 'Empire State University Labs', position: 'Researcher', start: '2016-01-01', end: '2018-05-31', description: '' })})
-        console.log(this.state)
     }
 
     addExperience(event) {
@@ -157,11 +153,13 @@ export default class App extends React.Component {
         const index = education.findIndex((program) => program.id === id);
 
         this.setState({...this.state, education: [...education.slice(0, index), ...education.slice(index + 1)]});
-
     }
 
     removeMisc(id) {
+        const { misc } = this.state;
+        const index = misc.findIndex((experience) => experience.id === id);
 
+        this.setState({...this.state, misc: [...misc.slice(0, index), ...misc.slice(index + 1)]});
     }
 
     removeExperience(event) {
@@ -215,15 +213,10 @@ export default class App extends React.Component {
         }
     }
 
-    submitForm(event) {
-        event.preventDefault();
-        console.log(this.state);
-    }
-
     render() {
         return(
             <div>
-                <Input state={this.state} addExperience={this.addExperience} removeExperience={this.removeExperience} handleChange={this.handleChange} submitForm={this.submitForm}/>
+                <Input state={this.state} addExperience={this.addExperience} removeExperience={this.removeExperience} handleChange={this.handleChange} />
                 <Resume state={this.state}/>
             </div>
         );

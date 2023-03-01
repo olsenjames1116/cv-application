@@ -6,7 +6,7 @@ export default class MiscInput extends React.Component {
     }
 
     render() {
-        const { addExperience, misc, handleChange } = this.props;
+        const { addExperience, removeExperience, misc, handleChange } = this.props;
 
         return (
             <fieldset>
@@ -26,6 +26,7 @@ export default class MiscInput extends React.Component {
                                     <input type='date' id={`end_${experience.id}`} className='misc' placeholder={experience.end} onChange={handleChange}></input>
                                     <label htmlFor={`description_${experience.id}`}>Description:</label>
                                     <textarea id={`description_${experience.id}`} className='misc' placeholder={experience.description} onChange={handleChange}></textarea>
+                                    <button type='button' id={experience.id} className='misc' onClick={removeExperience}>Delete</button>
                                 </li>
                             );
                         })
