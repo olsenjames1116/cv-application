@@ -6,7 +6,7 @@ export default class WorkInput extends React.Component {
     }
 
     render() {
-        const { addExperience, work, handleChange } = this.props;
+        const { addExperience, removeExperience, work, handleChange } = this.props;
 
         return (
             <fieldset>
@@ -26,6 +26,7 @@ export default class WorkInput extends React.Component {
                                     <input type='date' id={`end_${job.id}`} className='work' placeholder={job.end} onChange={handleChange}></input>
                                     <label htmlFor={`description_${job.id}`}>Description:</label>
                                     <textarea id={`description_${job.id}`} className='work' placeholder={job.description} onChange={handleChange}></textarea>
+                                    <button type='button' id={job.id} className='work' onClick={removeExperience}>Delete</button>
                                 </li>
                             );
                     })}

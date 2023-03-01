@@ -6,7 +6,7 @@ export default class EducationInput extends React.Component {
     }
 
     render() {
-        const { addExperience, education, handleChange } = this.props;
+        const { addExperience, removeExperience, education, handleChange } = this.props;
 
         return (
             <fieldset>
@@ -26,6 +26,7 @@ export default class EducationInput extends React.Component {
                                     <input type='date' id={`end_${program.id}`} className='education' placeholder={program.end} onChange={handleChange}></input>
                                     <label htmlFor={`description_${program.id}`}>Description:</label>
                                     <textarea id={`description_${program.id}`} className='education' placeholder={program.description} onChange={handleChange}></textarea>
+                                    <button type='button' id={program.id} className='education' onClick={removeExperience}>Delete</button>
                                 </li>
                             );
                         })

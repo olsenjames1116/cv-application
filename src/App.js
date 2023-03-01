@@ -55,6 +55,7 @@ export default class App extends React.Component {
         }
 
         this.addExperience = this.addExperience.bind(this);
+        this.removeExperience = this.removeExperience.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.submitForm = this.submitForm.bind(this);
     }
@@ -144,6 +145,41 @@ export default class App extends React.Component {
         }
     }
 
+    removeWork(id) {
+        const { work } = this.state;
+        const index = work.findIndex((job) => job.id === id);
+
+        this.setState({...this.state, work: [...work.slice(0, index), ...work.slice(index + 1)]});
+    }
+
+    removeEducation(id) {
+        const { education } = this.state;
+        const index = education.findIndex((program) => program.id === id);
+
+        this.setState({...this.state, education: [...education.slice(0, index), ...education.slice(index + 1)]});
+
+    }
+
+    removeMisc(id) {
+
+    }
+
+    removeExperience(event) {
+        const { className, id } = event.target;
+
+        switch(className) {
+            case 'work':
+                this.removeWork(id);
+                break;
+            case 'education':
+                this.removeEducation(id);
+                break;
+            default :
+                this.removeMisc(id);
+                break;
+        }
+    }
+
     handleChange(event) {
         const { className, id, value } = event.target;
 
@@ -187,7 +223,7 @@ export default class App extends React.Component {
     render() {
         return(
             <div>
-                <Input state={this.state} addExperience={this.addExperience} handleChange={this.handleChange} submitForm={this.submitForm}/>
+                <Input state={this.state} addExperience={this.addExperience} removeExperience={this.removeExperience} handleChange={this.handleChange} submitForm={this.submitForm}/>
                 <Resume state={this.state}/>
             </div>
         );
