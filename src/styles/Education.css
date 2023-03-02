@@ -1,0 +1,28 @@
+div.resumeEducation > h3 {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+div.resumeEducation > ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+div.resumeEducation h4 {
+  margin: 0;
+  display: inline;
+}
+
+div.resumeEducation > ul > li > span:nth-child(2) {
+  font-style: italic;
+}
+
+div.resumeEducation > ul > li > p {
+  margin-top: 0;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
