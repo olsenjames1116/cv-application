@@ -1,9 +1,9 @@
-div.resumeSummary > h3 {
+div.resumeSkills > h3 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-div.resumeSummary > p {
+div.resumeSkills > p {
   margin: 0;
   margin-left: 10px;
   margin-right: 10px;

@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/Skills.css';
 
 export default class Skills extends React.Component {
     constructor(props) {
@@ -9,8 +10,8 @@ export default class Skills extends React.Component {
         const { skills } = this.props;
 
         return (
-            <div>
-                <h2>Skills</h2>
+            <div className='resumeSkills'>
+                <h3>Skills</h3>
                 <p>{skills}</p>
             </div>
         );
