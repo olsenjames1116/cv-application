@@ -1,0 +1,44 @@
+ul.work {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.work > li {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+ul.work > li > div:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.company,
+div.position,
+div.start,
+div.end {
+  display: flex;
+  flex-direction: column;
+}
+
+ul.work > li > div:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul.work > li > div:nth-last-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+
+textarea.work {
+  resize: none;
+  height: 100px;
+  overflow: scroll;
+}
+
+button.work {
+  margin-bottom: 10px;
+}

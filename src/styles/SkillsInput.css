@@ -6,6 +6,6 @@ div.skills {
 
 textarea#skills {
   resize: none;
-  height: 100px;
+  height: 50px;
   overflow: scroll;
 }
