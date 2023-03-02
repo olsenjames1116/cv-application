@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/Contact.css';
 
 export default class Contact extends React.Component {
     constructor(props) {
@@ -10,9 +11,9 @@ export default class Contact extends React.Component {
         const { street, city, state, zip } = this.props.contact.address;
 
         return (
-            <div>
+            <div className='contact'>
                 <h1>{firstName} {lastName}</h1>
-                <p>
+                <p className='contact'>
                     <span>{street}, {city}, {state} {zip}</span>
                     <span> - {phone}</span>
                     <span> - {email}</span>

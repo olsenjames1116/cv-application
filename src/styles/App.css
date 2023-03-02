@@ -4,8 +4,10 @@ div.container {
 
 form {
   flex: 1;
+  outline: 1px solid black;
 }
 
 div.resume {
   flex: 1;
+  outline: 1px solid black;
 }
