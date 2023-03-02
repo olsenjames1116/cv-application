@@ -1,40 +1,36 @@
-fieldset.education {
-  margin-bottom: 10px;
-}
-
-ul.education {
+ul.misc {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-ul.education > li {
+ul.misc > li {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-ul.education > li > div:first-child,
-ul.education > li > div:nth-child(2) {
+ul.misc > li > div:first-child,
+ul.misc > li > div:nth-child(2) {
   display: flex;
   justify-content: space-between;
 }
 
-div.school,
-div.curriculum,
-div.educationStart,
-div.educationEnd,
-div.educationDescription {
+div.organization,
+div.miscPosition,
+div.miscStart,
+div.miscEnd,
+div.miscDescription {
   display: flex;
   flex-direction: column;
 }
 
-textarea.education {
+textarea.misc {
   resize: none;
   height: 100px;
   overflow: scroll;
 }
 
-button.education {
+button.misc {
   margin-bottom: 10px;
 }
