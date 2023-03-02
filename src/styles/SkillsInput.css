@@ -1,0 +1,11 @@
+div.skills {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+textarea#skills {
+  resize: none;
+  height: 100px;
+  overflow: scroll;
+}
