@@ -1,0 +1,28 @@
+div.resumeWork > h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+div.resumeWork > ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+div.resumeWork h4 {
+  margin: 0;
+  display: inline;
+}
+
+div.resumeWork > ul > li > span:nth-child(2) {
+  font-style: italic;
+}
+
+div.resumeWork > ul > li > p {
+  margin-top: 0;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
