@@ -1,9 +1,16 @@
+body {
+  margin: 0;
+}
+
 div.container {
   display: flex;
 }
 
 form {
   flex: 1;
+  padding: 5px;
+  background-color: #334173;
+  color: #c0cffa;
   outline: 1px solid black;
 }
 
@@ -11,4 +18,41 @@ div.resume {
   flex: 1;
   padding: 20px;
   outline: 1px solid black;
+}
+
+div.contact {
+  background-color: #212c58;
+  color: #c0cffa;
+}
+
+h3 {
+  color: #212c58;
+}
+
+h4 {
+  color: #334173;
+}
+
+fieldset {
+  border-color: #c0cffa;
+}
+
+textarea,
+input {
+  background-color: #9daddf;
+  color: #334173;
+}
+
+li > button:last-child {
+  background-color: rgb(255, 67, 67);
+}
+
+fieldset > button:last-child {
+  background-color: rgb(44, 226, 44);
+  width: 50%;
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
 }
