@@ -1,44 +1,44 @@
-fieldset.work {
+fieldset.education {
   margin-bottom: 10px;
 }
 
-ul.work {
+ul.education {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-ul.work > li {
+ul.education > li {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-ul.work > li > div:first-child {
+ul.education > li > div:first-child {
   display: flex;
   justify-content: space-between;
 }
 
-div.company,
-div.position,
-div.workStart,
-div.workEnd,
-div.workDescription {
+div.school,
+div.curriculum,
+div.educationStart,
+div.educationEnd,
+div.educationDescription {
   display: flex;
   flex-direction: column;
 }
 
-ul.work > li > div:nth-child(2) {
+ul.education > li > div:nth-child(2) {
   display: flex;
   justify-content: space-between;
 }
 
-textarea.work {
+textarea.education {
   resize: none;
   height: 100px;
   overflow: scroll;
 }
 
-button.work {
+button.education {
   margin-bottom: 10px;
 }

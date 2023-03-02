@@ -10,7 +10,7 @@ export default class WorkInput extends React.Component {
         const { addExperience, removeExperience, work, handleChange } = this.props;
 
         return (
-            <fieldset>
+            <fieldset className='work'>
                 <legend>Work Experience</legend>
                 <ul className='work'>
                     {
@@ -28,16 +28,16 @@ export default class WorkInput extends React.Component {
                                         </div>
                                     </div>
                                     <div>
-                                        <div className='start'>
+                                        <div className='workStart'>
                                             <label htmlFor={`start_${job.id}`}>Start Date:</label>
                                             <input type='date' id={`start_${job.id}`} className='work' placeholder={job.start} onChange={handleChange}></input>
                                         </div>
-                                        <div className='end'>
+                                        <div className='workEnd'>
                                             <label htmlFor={`end_${job.id}`}>End Date:</label>
                                             <input type='date' id={`end_${job.id}`} className='work' placeholder={job.end} onChange={handleChange}></input>
                                         </div>
                                     </div>
-                                    <div>
+                                    <div className='workDescription'>
                                         <label htmlFor={`description_${job.id}`}>Description:</label>
                                         <textarea id={`description_${job.id}`} className='work' placeholder={job.description} onChange={handleChange}></textarea>
                                     </div>
