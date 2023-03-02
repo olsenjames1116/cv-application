@@ -1,0 +1,28 @@
+div.resumeMisc > h3 {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+div.resumeMisc > ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+div.resumeMisc h4 {
+  margin: 0;
+  display: inline;
+}
+
+div.resumeMisc > ul > li > span:nth-child(2) {
+  font-style: italic;
+}
+
+div.resumeMisc > ul > li > p {
+  margin-top: 0;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
