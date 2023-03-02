@@ -1,0 +1,8 @@
+div.resumeSummary > h3,
+div.resumeSummary > p {
+  margin: 0;
+}
+
+div.resumeSummary > p {
+  word-break: break-word;
+}

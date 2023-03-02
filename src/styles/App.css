@@ -9,5 +9,6 @@ form {
 
 div.resume {
   flex: 1;
+  padding: 20px;
   outline: 1px solid black;
 }
