@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/Education.css';
 
+// Represents the education section of the resume
 export default class Education extends React.Component {
     constructor(props) {
         super(props);
@@ -13,6 +14,7 @@ export default class Education extends React.Component {
             <div className='resumeEducation'>
                 <h3>Education</h3>
                 <ul>
+                    {/* Display all the education experience from input on the resume */}
                     {
                         education.map((program) => {
                             return (

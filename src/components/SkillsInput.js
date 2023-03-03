@@ -1,6 +1,7 @@
 import React from "react";
 import '../styles/SkillsInput.css';
 
+// Represents the skills section of the form
 export default class SkillsInput extends React.Component {
     constructor(props) {
         super(props);

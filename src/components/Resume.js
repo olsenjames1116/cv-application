@@ -6,6 +6,7 @@ import Work from './Work';
 import Education from './Education';
 import Misc from './Misc';
 
+// Represents the resume section of the page
 export default class Resume extends React.Component {
     constructor(props) {
         super(props);

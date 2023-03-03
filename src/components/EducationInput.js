@@ -1,6 +1,7 @@
 import React from "react";
 import '../styles/EducationInput.css';
 
+// Represents the education section of the form
 export default class EducationInput extends React.Component {
     constructor(props) {
         super(props);
@@ -13,6 +14,7 @@ export default class EducationInput extends React.Component {
             <fieldset className='education'>
                 <legend>Education</legend>
                 <ul className='education'>
+                    {/* Display all the input sections for education to allow user to edit them */}
                     {
                         education.map((program) => {
                             return (

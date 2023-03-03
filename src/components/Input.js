@@ -6,6 +6,7 @@ import WorkInput from './WorkInput';
 import EducationInput from './EducationInput';
 import MiscInput from './MiscInput';
 
+// Represents the form section of the page
 export default class Input extends React.Component {
     constructor(props) {
         super(props);

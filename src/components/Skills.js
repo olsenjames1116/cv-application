@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/Skills.css';
 
+// Represents the skills section of the resume
 export default class Skills extends React.Component {
     constructor(props) {
         super(props);

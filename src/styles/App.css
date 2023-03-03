@@ -12,6 +12,7 @@ form {
   background-color: #334173;
   color: #c0cffa;
   outline: 1px solid black;
+  font-size: 1.2rem;
 }
 
 div.resume {
@@ -55,4 +56,6 @@ fieldset > button:last-child {
 button {
   border: 0;
   border-radius: 10px;
+  font-size: 1.2rem;
+  height: 40px;
 }

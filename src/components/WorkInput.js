@@ -1,6 +1,7 @@
 import React from "react";
 import '../styles/WorkInput.css';
 
+// Represents the work experience section of the form
 export default class WorkInput extends React.Component {
     constructor(props) {
         super(props);
@@ -13,6 +14,7 @@ export default class WorkInput extends React.Component {
             <fieldset className='work'>
                 <legend>Work Experience</legend>
                 <ul className='work'>
+                    {/* Display all the work experience to allow the user to edit them */}
                     {
                         work.map((job) => {
                             return (                        

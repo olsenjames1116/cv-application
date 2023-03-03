@@ -1,6 +1,7 @@
 import React from "react";
 import '../styles/ContactInput.css';
 
+// Represents the contact section of the form
 export default class ContactInput extends React.Component {
     constructor(props) {
         super(props);

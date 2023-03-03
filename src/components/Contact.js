@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/Contact.css';
 
+// Represents the contact section of the resume
 export default class Contact extends React.Component {
     constructor(props) {
         super(props);

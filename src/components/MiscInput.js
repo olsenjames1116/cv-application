@@ -1,6 +1,7 @@
 import React from "react";
 import '../styles/MiscInput.css';
 
+// Represents the misc section of the form
 export default class MiscInput extends React.Component {
     constructor(props) {
         super(props);
@@ -13,6 +14,7 @@ export default class MiscInput extends React.Component {
             <fieldset>
                 <legend>Misc Experience</legend>
                 <ul className='misc'>
+                    {/* Display all misc experience to allow the user to edit them */}
                     {
                         misc.map((experience) => {
                             return (

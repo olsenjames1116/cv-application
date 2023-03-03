@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/Summary.css';
 
+// Represents the summary section of the resume
 export default class Summary extends React.Component {
     constructor(props) {
         super(props);

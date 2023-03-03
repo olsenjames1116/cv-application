@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/Misc.css';
 
+// Represents the misc experience section of the resume
 export default class Misc extends React.Component {
     constructor(props) {
         super(props);
@@ -13,6 +14,7 @@ export default class Misc extends React.Component {
             <div className='resumeMisc'>
                 <h3>Miscellaneous Experience</h3>
                 <ul>
+                    {/* Display all misc experience on the resume */}
                     {
                         misc.map((experience) => {
                             return (
