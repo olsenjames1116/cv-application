@@ -7,24 +7,21 @@ import EducationInput from './EducationInput';
 import MiscInput from './MiscInput';
 
 // Represents the form section of the page
-export default class Input extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+const Input = (props) => {
+    const {contact, summary, skills, work, education, misc} = props.state;
+    const {addExperience, removeExperience, handleChange} = props;
 
-    render() {
-        const { contact, summary, skills, work, education, misc } = this.props.state;
-        const { addExperience, removeExperience, handleChange } = this.props;
+    return (
+        <form>
+            <ContactInput contact={contact} handleChange={handleChange}/>
+            <SummaryInput summary={summary} handleChange={handleChange}/>
+            <SkillsInput skills={skills} handleChange={handleChange}/>
+            <WorkInput addExperience={addExperience} removeExperience={removeExperience} work={work} handleChange={handleChange}/>
+            <EducationInput addExperience={addExperience} removeExperience={removeExperience} education={education} handleChange={handleChange}/>
+            <MiscInput addExperience={addExperience} removeExperience={removeExperience} misc={misc} handleChange={handleChange}/>
+        </form>
 
-        return (
-            <form>
-                <ContactInput contact={contact} handleChange={handleChange}/>
-                <SummaryInput summary={summary} handleChange={handleChange}/>
-                <SkillsInput skills={skills} handleChange={handleChange}/>
-                <WorkInput addExperience={addExperience} removeExperience={removeExperience} work={work} handleChange={handleChange}/>
-                <EducationInput addExperience={addExperience} removeExperience={removeExperience} education={education} handleChange={handleChange}/>
-                <MiscInput addExperience={addExperience} removeExperience={removeExperience} misc={misc} handleChange={handleChange}/>
-            </form>
-        );
-    }
+    );
 }
+
+export default Input;

@@ -7,23 +7,19 @@ import Education from './Education';
 import Misc from './Misc';
 
 // Represents the resume section of the page
-export default class Resume extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+const Resume = (props) => {
+    const {contact, summary, skills, work, education, misc} = props.state;
 
-    render() {
-        const { contact, summary, skills, work, education, misc } = this.props.state;
-
-        return (
-            <div className='resume'>
-                <Contact contact={contact}/>
-                <Summary summary={summary}/>
-                <Skills skills={skills}/>
-                <Work work={work}/>
-                <Education education={education}/>
-                <Misc misc={misc}/>
-            </div>
-        );
-    }
+    return (
+        <div className='resume'>
+            <Contact contact={contact}/>
+            <Summary summary={summary}/>
+            <Skills skills={skills}/>
+            <Work work={work}/>
+            <Education education={education}/>
+            <Misc misc={misc}/>
+        </div>
+    );
 }
+
+export default Resume;
