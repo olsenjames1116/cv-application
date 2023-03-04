@@ -10,5 +10,5 @@ This project highlights:
 - React
 - ES6 modules
 - OOP
-- Classes
+- Functional components
 - State/props
